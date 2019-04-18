@@ -1,1 +1,360 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700'); */
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700');
+
+
+/*--------------------------------------------------------------------------
+                      COLOR GUIDE
+BLACK:  rgb(15,15,15)
+        rgba(15,15,15,0.75)
+GOLD:   rgb(204, 128, 30)
+
+
+---------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------
+                      GLOBAL STYLES
+---------------------------------------------------------------------------*/
+
+body{
+  font-size: 19 px;
+  font-family: 'Cinzel', sans-serif;
+  color: azure;
+  background: rgba(17, 15, 15, 0.208);
+  /* background-image: url(./assets/images/background-buddha.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  /* background: rgba(56, 54, 54, 0.75) */
+  /* overflow: hidden; */
+}
+
+
+/* RWD: Increase Font Size based for Larger Screens */
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 1.2em;
+  }
+
+}
+
+h1, h2, h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.3684em;
+  line-height: 1.2656em;
+  margin-top: 0.4219em;
+  margin-bottom: 0;
+  /* color: rgb(204, 128, 30); */
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.2558em;
+  margin: 0.4219em auto 0.4219em auto;
+}
+
+h3 {
+  font-size: 1.5263em;
+  font-weight: normal;
+  line-height: 1.8621em;
+  margin-top: 0.9310em;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 1.4211em;
+  margin-top: 1.4211em;
+  margin-bottom: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  width: 100%;
+}
+
+
+a:link{
+color: rgb(14, 8, 11);
+font-size: 0.9em;
+}
+
+  a:visited{
+
+    color: rgb(14, 8, 11);
+    }
+
+  a:hover{
+    color: rgb(15, 3, 10);
+    background: rgb(146, 138, 142);
+        }
+
+  a:active{
+    color: rgb(214, 61, 181);
+    }
+
+
+/*--------------------------------------------------------------------------
+                      LOGO STYLES
+---------------------------------------------------------------------------*/
+.logo {
+  margin: 0 auto;
+  width: 200px;
+}
+    .logo img {
+      width: 200px;
+    }
+
+/*--------------------------------------------------------------------------
+                      MAIN NAVIGATION STYLES
+---------------------------------------------------------------------------*/
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 250,0.3);
+  z-index: 9;
+}
+
+.header-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.logo-container{
+  width: 100px;
+  margin: 0 auto;
+}
+
+.main-logo{
+  width: 100px;
+}
+
+.main-logo img {
+  width: 100px;
+}
+
+.main-nav {
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-nav ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+  .main-nav ul li{
+    list-style: none;
+    text-align: center;
+    margin-left: 10px;
+    display: inline;
+  }
+
+  .main-nav a {
+    text-decoration: none;
+  }
+
+
+.menu-btn {
+    color: black;
+    font-size: 1.2em;
+  }
+.right-nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+/* HOME STYLES */
+.home {
+  clear: both;
+  display: flex;
+}
+.home-container {
+  display: flex;
+  /* width: 100%; */
+  height: 100%;
+  position: relative;
+  top: 100px;
+
+}
+
+/* PRODUCT MENU */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.product-menu {
+  position: absolute;
+  top: 100px;
+  background: rgba(66, 64, 64, 0.521);
+  width: 30%;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  z-index: 99;
+  height: 100%;
+}
+
+
+.product-menu ul {
+  margin: 40px 0 0 40px;;
+  padding: 0;
+}
+
+.product-menu ul li{
+  list-style: none;
+}
+
+.product-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.5em;
+  letter-spacing: 3px;
+}
+
+.product-menu .collection {
+  margin-left: 25px;
+  margin-bottom: 0px;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 60%;
+  font-size: 2em;
+}
+
+.collection-month{
+  font-size: 0.2em;
+  font-weight: 400;
+  margin-top: 0px;
+  letter-spacing: 3px;
+}
+
+/* SLIDER*/
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slider{
+  position: relative;
+}
+.slider img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  background: forestgreen;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.slider-1{
+  width: 33%;
+}
+
+.slider-2{
+  width: 33%;
+}
+
+.slider-3{
+  width: 33%;
+}
+
+.slider-note{
+  position: absolute;
+  color: black;
+  top: 80%;
+  right: 10%;
+  text-decoration: none;
+  background: none;
+  font-weight: 400;
+}
+
+.purple a{
+  color: antiquewhite;
+}
+
+
+
+
+/*--------------------------------------------------------------------------
+                      FEATURED-SECTION STYLES
+---------------------------------------------------------------------------*/
+/* .featured-section{
+
+margin-top: 20px;
+} */
+
+  .featured-section h3 {
+    border-bottom: 2px solid rgb(204, 128, 30);
+  }
+
+  .featured-section p {
+    font-style: italic;
+
+  }
+
+  .featured-section ul {
+    list-style: none;
+    padding: 0;
+    font-style: italic;
+  }
+
+  @media screen and (min-width: 1050px) {
+    .featured-section {
+      float: left;
+      max-width: 25%;
+      margin-left: 4%;
+    }
+  }
+
+
+/*--------------------------------------------------------------------------
+                      FOOTER STYLES
+---------------------------------------------------------------------------*/
+
+footer {
+  clear: both;
+  padding: 10px 0;
+}
+
+    footer h4 {
+      text-transform: uppercase;
+    }
+
+
+    footer p {
+      margin: 0;
+    }
+
+
+
